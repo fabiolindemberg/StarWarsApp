@@ -62,6 +62,9 @@ class PersonTableViewController: UITableViewController {
             
             cell.textLabel?.text = person.name
             cell.detailTextLabel?.text = person.gender
+        } else {
+            cell.textLabel?.text = ""
+            cell.detailTextLabel?.text = ""
         }
         
         return cell

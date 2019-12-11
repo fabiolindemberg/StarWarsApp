@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Star Wars People-->
         <scene sceneID="L7b-y7-Rli">
             <objects>
                 <tableViewController id="dnQ-rm-Lsz" customClass="PersonTableViewController" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,11 +21,11 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" textLabel="g51-jw-Xo5" detailTextLabel="R1I-0R-vgI" style="IBUITableViewCellStyleSubtitle" id="gTJ-C7-uOL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="personCell" textLabel="g51-jw-Xo5" detailTextLabel="R1I-0R-vgI" style="IBUITableViewCellStyleSubtitle" id="gTJ-C7-uOL">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gTJ-C7-uOL" id="lSU-zw-QeY">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g51-jw-Xo5">
@@ -45,7 +45,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="1yU-5s-E9x" kind="showDetail" id="5sF-U1-JJp"/>
+                                    <segue destination="1yU-5s-E9x" kind="show" id="5sF-U1-JJp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -54,28 +54,28 @@
                             <outlet property="delegate" destination="dnQ-rm-Lsz" id="OPM-MH-8kK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Utm-Ur-iu4"/>
+                    <navigationItem key="navigationItem" title="Star Wars People" id="Utm-Ur-iu4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90d-af-w7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="136"/>
         </scene>
-        <!--Person View Controller-->
+        <!--Person Info-->
         <scene sceneID="eFp-Rn-JJv">
             <objects>
-                <viewController id="1yU-5s-E9x" customClass="PersonViewController" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Person Info" id="1yU-5s-E9x" customClass="PersonViewController" customModule="StarWarsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NjV-7s-CQ1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ez-ql-Qou">
-                                <rect key="frame" x="16" y="24" width="382" height="30"/>
+                                <rect key="frame" x="16" y="164" width="382" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FG9-k4-Jty">
-                                <rect key="frame" x="16" y="78" width="382" height="77.5"/>
+                                <rect key="frame" x="16" y="218" width="382" height="77.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYh-hI-vyk">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -109,6 +109,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f8h-JX-z4a"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Person Info" id="EXg-qg-aC7"/>
                     <connections>
                         <outlet property="lbBirthYear" destination="RYh-hI-vyk" id="7A8-sH-pDX"/>
                         <outlet property="lbGenre" destination="57m-ve-L8b" id="T72-qa-tqe"/>
@@ -124,8 +125,8 @@
         <scene sceneID="WmT-lm-zsq">
             <objects>
                 <navigationController id="rGn-Jn-S8N" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0AS-Co-QAt">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0AS-Co-QAt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
