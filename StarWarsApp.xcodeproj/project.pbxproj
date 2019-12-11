@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		33AAAA5C23A04CB100413AE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA5B23A04CB100413AE8 /* AppDelegate.swift */; };
 		33AAAA5E23A04CB100413AE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA5D23A04CB100413AE8 /* SceneDelegate.swift */; };
-		33AAAA6023A04CB100413AE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA5F23A04CB100413AE8 /* ViewController.swift */; };
 		33AAAA6323A04CB100413AE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AAAA6123A04CB100413AE8 /* Main.storyboard */; };
 		33AAAA6623A04CB100413AE8 /* StarWarsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA6423A04CB100413AE8 /* StarWarsApp.xcdatamodeld */; };
 		33AAAA6823A04CB400413AE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AAAA6723A04CB400413AE8 /* Assets.xcassets */; };
 		33AAAA6B23A04CB400413AE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AAAA6923A04CB400413AE8 /* LaunchScreen.storyboard */; };
 		33AAAA7623A04CB400413AE8 /* StarWarsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA7523A04CB400413AE8 /* StarWarsAppTests.swift */; };
+		33AAAA8123A04D4400413AE8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA8023A04D4400413AE8 /* Service.swift */; };
+		33AAAA8323A04EE500413AE8 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA8223A04EE500413AE8 /* Person.swift */; };
+		33AAAA8723A04FD600413AE8 /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA8623A04FD600413AE8 /* PersonService.swift */; };
+		33AAAA8923A0504800413AE8 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA8823A0504800413AE8 /* PersonTableViewController.swift */; };
+		33AAAA8D23A0779F00413AE8 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AAAA8C23A0779F00413AE8 /* PersonViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,6 @@
 		33AAAA5823A04CB100413AE8 /* StarWarsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AAAA5B23A04CB100413AE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33AAAA5D23A04CB100413AE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33AAAA5F23A04CB100413AE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33AAAA6223A04CB100413AE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33AAAA6523A04CB100413AE8 /* StarWarsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StarWarsApp.xcdatamodel; sourceTree = "<group>"; };
 		33AAAA6723A04CB400413AE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		33AAAA7123A04CB400413AE8 /* StarWarsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWarsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AAAA7523A04CB400413AE8 /* StarWarsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAppTests.swift; sourceTree = "<group>"; };
 		33AAAA7723A04CB400413AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33AAAA8023A04D4400413AE8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		33AAAA8223A04EE500413AE8 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		33AAAA8623A04FD600413AE8 /* PersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonService.swift; sourceTree = "<group>"; };
+		33AAAA8823A0504800413AE8 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
+		33AAAA8C23A0779F00413AE8 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,13 +90,14 @@
 			isa = PBXGroup;
 			children = (
 				33AAAA5B23A04CB100413AE8 /* AppDelegate.swift */,
-				33AAAA5D23A04CB100413AE8 /* SceneDelegate.swift */,
-				33AAAA5F23A04CB100413AE8 /* ViewController.swift */,
-				33AAAA6123A04CB100413AE8 /* Main.storyboard */,
 				33AAAA6723A04CB400413AE8 /* Assets.xcassets */,
-				33AAAA6923A04CB400413AE8 /* LaunchScreen.storyboard */,
 				33AAAA6C23A04CB400413AE8 /* Info.plist */,
+				33AAAA5D23A04CB100413AE8 /* SceneDelegate.swift */,
 				33AAAA6423A04CB100413AE8 /* StarWarsApp.xcdatamodeld */,
+				33AAAA9123A0805300413AE8 /* controllers */,
+				33AAAA9023A0803E00413AE8 /* models */,
+				33AAAA8F23A0802C00413AE8 /* services */,
+				33AAAA8E23A0801300413AE8 /* views */,
 			);
 			path = StarWarsApp;
 			sourceTree = "<group>";
@@ -100,6 +109,41 @@
 				33AAAA7723A04CB400413AE8 /* Info.plist */,
 			);
 			path = StarWarsAppTests;
+			sourceTree = "<group>";
+		};
+		33AAAA8E23A0801300413AE8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				33AAAA6123A04CB100413AE8 /* Main.storyboard */,
+				33AAAA6923A04CB400413AE8 /* LaunchScreen.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		33AAAA8F23A0802C00413AE8 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				33AAAA8023A04D4400413AE8 /* Service.swift */,
+				33AAAA8623A04FD600413AE8 /* PersonService.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		33AAAA9023A0803E00413AE8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				33AAAA8223A04EE500413AE8 /* Person.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		33AAAA9123A0805300413AE8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33AAAA8C23A0779F00413AE8 /* PersonViewController.swift */,
+				33AAAA8823A0504800413AE8 /* PersonTableViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,10 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33AAAA8323A04EE500413AE8 /* Person.swift in Sources */,
 				33AAAA6623A04CB100413AE8 /* StarWarsApp.xcdatamodeld in Sources */,
-				33AAAA6023A04CB100413AE8 /* ViewController.swift in Sources */,
+				33AAAA8123A04D4400413AE8 /* Service.swift in Sources */,
 				33AAAA5C23A04CB100413AE8 /* AppDelegate.swift in Sources */,
+				33AAAA8923A0504800413AE8 /* PersonTableViewController.swift in Sources */,
+				33AAAA8723A04FD600413AE8 /* PersonService.swift in Sources */,
 				33AAAA5E23A04CB100413AE8 /* SceneDelegate.swift in Sources */,
+				33AAAA8D23A0779F00413AE8 /* PersonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
