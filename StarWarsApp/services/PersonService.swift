@@ -31,7 +31,7 @@ class PersonService: Service {
         }
     }
     
-    func getPeople(url: String? = nil, complition: @escaping (_ data: PaginationContainer?,_ error: Error?) -> Void) {
+    func fetchPeople(url: String? = nil, complition: @escaping (_ data: PaginationContainer?,_ error: Error?) -> Void) {
         
         let path = "people"
         

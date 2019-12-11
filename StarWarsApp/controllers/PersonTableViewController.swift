@@ -32,31 +32,37 @@ class PersonTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadPeople()
+        
+        tableView.prefetchDataSource = self
+        
+        fetchPeople()
     }
     
-    private func loadPeople() {
+    private func fetchPeople(nextPage: Bool = false) {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.startAnimating()
         tableView.backgroundView = activityIndicator
-        PersonService.shared.getPeople() { paginationContainer, error in
+        PersonService.shared.fetchPeople(url: nextPage ? paginationContainer?.next : nil) { paginationContainer, error in
             DispatchQueue.main.async {
-                (self.tableView.backgroundView as! UIActivityIndicatorView).stopAnimating()
+                (self.tableView.backgroundView as? UIActivityIndicatorView)?.stopAnimating()
             }
             self.paginationContainer = paginationContainer
         }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return people.count
+        return paginationContainer?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        let person = people[indexPath.row]
-        
-        cell.textLabel?.text = person.name
-        cell.detailTextLabel?.text = person.gender
+       
+        if !isLoadingCell(for: indexPath) {
+            let person = people[indexPath.row]
+            
+            cell.textLabel?.text = person.name
+            cell.detailTextLabel?.text = person.gender
+        }
         
         return cell
     }
@@ -67,4 +73,24 @@ class PersonTableViewController: UITableViewController {
         }
     }
     
+}
+
+extension PersonTableViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+          if indexPaths.contains(where: isLoadingCell) {
+            self.fetchPeople(nextPage: true)
+        }
+    }
+}
+
+private extension PersonTableViewController {
+    func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.row >= people.count
+    }
+    
+    func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
+        let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
+        let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
+        return Array(indexPathsIntersection)
+    }
 }
